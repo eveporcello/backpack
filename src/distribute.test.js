@@ -11,12 +11,12 @@ describe("Can distribute items evenly between bags", () => {
 
   test("totals items", () => {
     const weight = total(items);
-    expect(weight).toEqual(24);
+    expect(weight).toBe(24);
   });
 
   test("distributes items into correct bags", () => {
     const result = distribute(items);
-    expect(result).toMatchObject([
+    expect(result).toEqual([
       [
         { name: "Eno DoubleNest Hammock", weight: 1 },
         { name: "JetBoil Flash", weight: 1 },

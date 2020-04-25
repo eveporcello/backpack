@@ -7,13 +7,13 @@ export function total(items) {
 
 export function distribute(items) {
   return items.reduce(
-    ([first, second], item) => {
-      if (total(first) > total(second)) {
-        second = [item, ...second];
+    ([alex, eve], item) => {
+      if (total(alex) > total(eve)) {
+        eve = [item, ...eve];
       } else {
-        first = [item, ...first];
+        alex = [item, ...alex];
       }
-      return [first, second];
+      return [alex, eve];
     },
     [[], []]
   );
